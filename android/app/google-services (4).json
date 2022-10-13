@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "71758470358",
+    "project_id": "authtester-e56c0",
+    "storage_bucket": "authtester-e56c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71758470358:android:90a3e1fa9746a82ad5bd77",
+        "android_client_info": {
+          "package_name": "com.example.tester"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71758470358-mub6n9p4qpdkq5c8a6286s7mgfak3url.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpKAvXOmdGvjMZKYFGynXt-E1t8QhKqoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71758470358-mub6n9p4qpdkq5c8a6286s7mgfak3url.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
