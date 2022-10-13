@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tester/pages/account.dart';
 import 'package:tester/pages/notification.dart';
-import 'package:tester/pages/home.dart';
 import 'package:tester/pages/bookrides.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,9 +26,11 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     final List<Widget> pages = [
-      UserHome(email: widget.userEmail),
+      // UserHome(email: widget.userEmail),
       UserRides(email: widget.userEmail),
-      const UserChat(),
+      UserChat(
+        email: widget.userEmail,
+      ),
       const UserAccount(),
     ];
     _allPages = pages;
@@ -46,17 +47,13 @@ class _HomePageState extends State<HomePage> {
             type: BottomNavigationBarType.fixed,
             items: const [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_month),
-                label: 'Book Rides',
+                label: 'Book a Ride',
               ),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.notifications), label: 'Notifications'),
+                  icon: Icon(Icons.notifications), label: 'View Booked Rides'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person), label: 'Account'),
+                  icon: Icon(Icons.person), label: 'See Account'),
             ]));
   }
 }
