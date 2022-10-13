@@ -1,19 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tester/Auth/mainpage.dart';
+import 'package:tester/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-      options: const FirebaseOptions(
-          apiKey: "AIzaSyCvGKZbUONUwVFEgeWFZ6ZtxAMFKLblipA",
-          authDomain: "zidallieappproj.firebaseapp.com",
-          databaseURL: "https://zidallieappproj-default-rtdb.firebaseio.com",
-          projectId: "zidallieappproj",
-          storageBucket: "zidallieappproj.appspot.com",
-          messagingSenderId: "554891898209",
-          appId: "1:554891898209:web:92ff0398154e5a997b2920",
-          measurementId: "G-QL87SC5T4K"));
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(const MyApp());
 }
