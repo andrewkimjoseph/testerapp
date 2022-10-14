@@ -99,8 +99,8 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 flutter_native_splash:
-  image: assets/zidallie_full.png
-  color: "#fafafa"
+  image: assets/splash_screen.png
+  color: "#f4d718"
 
 flutter_icons:
   android: "launcher_icon"
