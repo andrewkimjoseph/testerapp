@@ -19,6 +19,15 @@ class UserRides extends StatelessWidget {
 
   final String? email;
 
+  void clearForm() {
+    childnames.clear();
+    frequencyofrides.clear();
+    dateinput.clear();
+    pickuptime.clear();
+    pickuplocation.clear();
+    dropofflocation.clear();
+  }
+
   Future addData() async {
     var childemail = email!.replaceAll('.', '@');
 
@@ -31,6 +40,7 @@ class UserRides extends StatelessWidget {
       'pickuplocation': pickuplocation.text,
       'dropofflocation': dropofflocation.text
     });
+    clearForm();
   }
 
   @override
@@ -44,19 +54,22 @@ class UserRides extends StatelessWidget {
       ),
       body: Center(
         child: ListView(children: [
-          const Text(
-            'Fill in this form',
-            style: TextStyle(
-                fontSize: 20,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Roboto'),
-          ),
           const SizedBox(
             height: 30,
           ),
           Form(
               child: Column(children: [
+            const Text(
+              'FILL FORM',
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto'),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               //frequency of ride
@@ -224,7 +237,14 @@ class UserRides extends StatelessWidget {
               // submit button
               child: MaterialButton(
                 minWidth: double.infinity,
-                onPressed: addData,
+                onPressed: () {
+                  addData();
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                        content:
+                            Text('DATA SENT, ZIDALLIE TRIPS WILL CONTACT YOU')),
+                  );
+                },
                 color: Colors.yellow,
                 textColor: Colors.black,
                 child: const Text('Submit'),

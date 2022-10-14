@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
               BottomNavigationBarItem(
                   icon: Icon(Icons.notifications), label: 'View Booked Rides'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person), label: 'See Account'),
+                  icon: Icon(Icons.person), label: 'Sign Out'),
             ]));
   }
 }
